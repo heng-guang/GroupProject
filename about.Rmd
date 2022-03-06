@@ -1,5 +1,5 @@
 ---
-title: "About this blog"
+title: "Making Smart Real Estate Decisions using Visual Analytics"
 description: |
   Additional Details about the Blog
 ---

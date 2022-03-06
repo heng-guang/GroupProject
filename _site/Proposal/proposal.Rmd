@@ -1,7 +1,7 @@
 ---
-title: "Project Proposal"
+title: "Making Smart Real Estate Decisions using Visual Analytics"
 description: |
-  Project proposal for the group Visual Analytics Project.
+  Project proposal and introduction for our Visual Analytics Project.
 author:
   - names: Mak Han Ren, Sia Heng Guang, Tan Jit Kai
     affiliation: Singapore Management University Master of IT in Business
@@ -18,12 +18,11 @@ knitr::opts_chunk$set(echo = FALSE)
 
 # Project Motivation
 
-
 Real estate is an industry where information is critical to make the right decisions, especially when looking to purchase expensive homes for stay or investment and much of the information while publicly available, is not easily filtered by the average home buyer. 
 
-Currently, property listing websites like 99.co and Propnex allow for buyers to do specific searches for currently existing properties in the market, however any analytics regarding previous transactions or further information is limited to their paid service applications meant for property agents. 
+Currently, property listing websites like [99.co](https://www.99.co/) and [Propnex](https://www.propnex.com/) allow buyers to do specific searches for listed properties in the market, however any analytics regarding past transactions or further information is limited to their paid service applications meant for real estate agents. 
 
-This means that home buyers are not able to easily study the price trends for themselves without consulting an agent directly who may not be willing to share certain information with them. Our project aims to provide a data visualization tool so that users can see basic analytics regarding past real estate trends in Singapore to make more informed decisions when buying property. 
+This means home buyers are not able to easily study the price trends for themselves without consulting an agent directly who may not be willing to share certain information with them. Our project aims to provide a data visualization tool so that users can see basic analytics regarding past real estate trends in Singapore to make more informed decisions when buying property. 
 
 
 # Objective 
