@@ -19,7 +19,7 @@ knitr::opts_chunk$set(echo = FALSE)
 # Project Motivation
 
 
-Real estate is an industry where information is critical to make the right decisions, especially when looking for purchase expensive homes for stay or investment and much of the information while publicly available, is not easily accessed by the average home buyer. 
+Real estate is an industry where information is critical to make the right decisions, especially when looking to purchase expensive homes for stay or investment and much of the information while publicly available, is not easily filtered by the average home buyer. 
 
 Currently, property listing websites like 99.co and Propnex allow for buyers to do specific searches for currently existing properties in the market, however any analytics regarding previous transactions or further information is limited to their paid service applications meant for property agents. 
 
@@ -34,22 +34,25 @@ We aim to use various R packages such as tidyverse, ggstatsplot, tmap, plotly, e
 
   2) Predictive Analysis 
 
+We will link our Rstudio to Github, and link it to our Netlify app.
+
+[Link to the Github repository](https://github.com/heng-guang/GroupProject)
 
 # Application Use Cases
 
 ### Potential Home Seekers 
 
-With the hundreds of thousands of past sales transactions data, buyers will be able to look at the trends of the property market over the previous years and isolate certain key factors such as location, type of property etc. to know what kind of prices they should be expecting to see before they search for listings.
+With the hundreds of thousands of past sales transactions data, buyers will be able to look at the *trends* of the property market over the previous years and isolate certain key factors such as location, type of property etc. to know what kind of prices they should be expecting to see before they search for listings.
 
 ### Investment Seekers 
 
-Users will be able to see the trends in turnover profits for past properties with similar characteristics to properties they are planning to purchase. Certain factors which would affect the flipping prices can be identified to help them decide what needs to be considered in their decisions.]
+Users will be able to see the *trends* in turnover profits for past properties with similar characteristics to properties they are planning to purchase. Certain factors which would affect the flipping prices can be identified to help them decide what needs to be considered in their decisions.]
 
 # Data
 
 Dataset used is obtained from the [**Realis**](https://www.ura.gov.sg/reis/index) database which has comprehensive transactional information regarding the Singapore property market.  
 
-We will be using the private residential sales data for the previous 10 years from January 2012 to December 2021. 
+We will be using the private residential sales data for the previous 10 years from **January 2012 to December 2021**.
 
 
 ## Proposed Analytical Methods and Visualizations
@@ -68,12 +71,12 @@ The filters include (but are not limited to):
   
 ### Exploratory Data Analysis
 
-To explore the dataset and identify useful trends with interactive visualizations that will be understandable with rudimentary statistical knowledge. 
+To explore the dataset and identify useful trends with **interactive visualizations** that will be understandable with basic statistical knowledge. Users can also choose what they would like to see based on their observations. 
 
 ### Confirmatory Data Analysis
 
-Using statistical testing methods to support the findings found in the exploratory data analysis. Optional viewing for users who might be interested in this. 
+Using **statistical testing** methods to support the findings found in the exploratory data analysis. Optional viewing for users who might be interested in this. 
 
 ### Prediction Model
 
-Using past data to create a predictive model on what price range users should expect for a property with their defined characteristics. 
+Using past data to create a predictive **model** on what price range users should expect for a property with their selected characteristics of a home. 

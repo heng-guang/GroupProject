@@ -1,9 +1,11 @@
 ---
 title: "About this blog"
 description: |
-  Some additional details about the blog
+  Additional Details about the Blog
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 ```
+
+Welcome to our blog! In this blog, we will showcase the various methods used to analyse real estate information, explore data, and make conclusions based on statistical analysis. We hope you like it!

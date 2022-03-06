@@ -3,10 +3,10 @@
     {
       "path": "about.html",
       "title": "About this blog",
-      "description": "Some additional details about the blog",
+      "description": "Additional Details about the Blog",
       "author": [],
-      "contents": "\r\n\r\n\r\n\r\n",
-      "last_modified": "2022-03-06T23:39:54+08:00"
+      "contents": "\r\nWelcome to our blog! In this blog, we will showcase the various methods used to analyse real estate information, explore data, and make conclusions based on statistical analysis. We hope you like it!\r\n\r\n\r\n\r\n",
+      "last_modified": "2022-03-06T23:49:12+08:00"
     },
     {
       "path": "index.html",
