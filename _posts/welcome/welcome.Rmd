@@ -1,0 +1,22 @@
+---
+title: "Welcome to our VA Project"
+description: |
+  Welcome to our new blog, VA Project. We hope you enjoy 
+  reading what we did!
+author:
+  - names: Mak Han Ren, Sia Heng Guang, Tan Jit Kai
+    affiliation: Singapore Management University Master of IT in Business
+    affiliation_url: https://scis.smu.edu.sg/master-it-business
+date: 03-06-2022
+output:
+  distill::distill_article:
+    self_contained: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+
+```
+
+
+

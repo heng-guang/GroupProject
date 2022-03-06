@@ -1,0 +1,18 @@
+name: "GroupProject"
+title: "VA Project"
+description: |
+  Our Website for Visual Analytics Group Project
+output_dir: "_site"
+navbar:
+  search: false
+  left:
+    - text: "Visual Analytics Project"
+      menu:
+      - text: "Proposal"
+        href: "Proposal/proposal.html"
+  right:
+    - text: "Home"
+      href: index.html
+    - text: "About"
+      href: about.html
+output: distill::distill_article

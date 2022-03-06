@@ -1,0 +1,19 @@
+[
+  {
+    "path": "posts/welcome/",
+    "title": "Welcome to our VA Project",
+    "description": "Welcome to our new blog, VA Project. We hope you enjoy \nreading what we did!",
+    "author": [
+      {
+        "name": "Mak Han Ren, Sia Heng Guang, Tan Jit Kai",
+        "url": {}
+      }
+    ],
+    "date": "2022-03-06",
+    "categories": [],
+    "contents": "\r\n\r\n\r\n\r\n",
+    "preview": {},
+    "last_modified": "2022-03-06T23:31:38+08:00",
+    "input_file": {}
+  }
+]
