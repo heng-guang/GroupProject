@@ -6,7 +6,7 @@ author:
   - names: Mak Han Ren, Sia Heng Guang, Tan Jit Kai
     affiliation: Singapore Management University Master of IT in Business
     affiliation_url: https://scis.smu.edu.sg/master-it-business
-date: "3-5-22"
+date: "3-6-22"
 output: 
  distill::distill_article:
    toc: TRUE

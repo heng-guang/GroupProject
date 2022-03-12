@@ -6,7 +6,7 @@ author:
   - names: Mak Han Ren, Sia Heng Guang, Tan Jit Kai
     affiliation: Singapore Management University Master of IT in Business
     affiliation_url: https://scis.smu.edu.sg/master-it-business
-date: "`r Sys.Date()`"
+date: "3-6-22"
 output: 
  distill::distill_article:
    toc: TRUE
@@ -15,6 +15,8 @@ output:
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 ```
+
+Updated on 12th March 2022 to include Storyboard
 
 # Project Motivation
 
@@ -56,7 +58,15 @@ We will be using the private residential sales data for the previous 10 years fr
 
 ## Proposed Analytical Methods and Visualizations
 
+### Insights
+
+![](img/insights.PNG)
+
+We will analyse several attributes of the data to come up with interesting insights as far as possible, where users can select and see which insight they want.
+
 ### Map
+
+![](img/heatmap.PNG)
 
 We will create a map module to show the prices and distribution of transactions in Singapore during the selected time periods.
 Filters will also be included so that users will be able to see the transactions more relevant to them.
@@ -70,12 +80,18 @@ The filters include (but are not limited to):
   
 ### Exploratory Data Analysis
 
+![](img/eda.PNG)
+
 To explore the dataset and identify useful trends with **interactive visualizations** that will be understandable with basic statistical knowledge. Users can also choose what they would like to see based on their observations. 
 
 ### Confirmatory Data Analysis
 
+![](img/cda.PNG)
+
 Using **statistical testing** methods to support the findings found in the exploratory data analysis. Optional viewing for users who might be interested in this. 
 
 ### Prediction Model
+
+![](img/pred.png)
 
 Using past data to create a predictive **model** on what price range users should expect for a property with their selected characteristics of a home. 
