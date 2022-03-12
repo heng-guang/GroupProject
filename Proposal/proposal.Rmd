@@ -82,7 +82,7 @@ The filters include (but are not limited to):
 
 ![](img/eda.PNG)
 
-To explore the dataset and identify useful trends with **interactive visualizations** that will be understandable with basic statistical knowledge. Users can also choose what they would like to see based on their observations. 
+To explore the dataset, and identify useful trends with **interactive visualizations** that will be understandable with basic statistical knowledge. Users can also choose what they would like to see based on their observations. 
 
 ### Confirmatory Data Analysis
 
@@ -94,4 +94,4 @@ Using **statistical testing** methods to support the findings found in the explo
 
 ![](img/pred.png)
 
-Using past data to create a predictive **model** on what price range users should expect for a property with their selected characteristics of a home. 
+Using past data to create a predictive **model** on what price range users should expect for a property with their selected characteristics of a home.
