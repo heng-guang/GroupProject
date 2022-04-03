@@ -1,15 +1,21 @@
-name: "GroupProject"
-title: "VA Project"
+name: "REALVIS"
+title: "REALVIS"
 description: |
-  Our Website for Visual Analytics Group Project
+  Our Website for Project REALVIS, our group project for ISSS608 Visual Analytics
 output_dir: "_site"
 navbar:
   search: false
   left:
-    - text: "Visual Analytics Project"
+    - text: "Deliverables"
       menu:
       - text: "Proposal"
         href: "Proposal/proposal.html"
+      - text: "User Guide"
+        href: "UserGuide/UserGuide_REALVIS.pdf"
+      - text: "Poster"
+        href: "Poster/Poster.png"
+    - text: "Shiny App"
+      href: https://hengguang.shinyapps.io/REALVIS/
   right:
     - text: "Home"
       href: index.html

@@ -87,26 +87,26 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
 
   <!--radix_placeholder_meta_tags-->
-  <title>VA Project</title>
+  <title>REALVIS</title>
 
 
 
 
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-  <meta property="og:title" content="VA Project"/>
+  <meta property="og:title" content="REALVIS"/>
   <meta property="og:type" content="article"/>
   <meta property="og:locale" content="en_US"/>
-  <meta property="og:site_name" content="VA Project"/>
+  <meta property="og:site_name" content="REALVIS"/>
 
   <!--  https://dev.twitter.com/cards/types/summary -->
   <meta property="twitter:card" content="summary"/>
-  <meta property="twitter:title" content="VA Project"/>
+  <meta property="twitter:title" content="REALVIS"/>
 
   <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","site","listing"]}},"value":[{"type":"character","attributes":{},"value":["VA Project"]},{"type":"character","attributes":{},"value":["distill::distill_website"]},{"type":"character","attributes":{},"value":["posts"]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","site","fig_caption"]}},"value":[{"type":"character","attributes":{},"value":["REALVIS"]},{"type":"character","attributes":{},"value":["distill::distill_website"]},{"type":"logical","attributes":{},"value":[true]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   <!--radix_placeholder_navigation_in_header-->
@@ -1790,12 +1790,12 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
 </head>
 
-<body class="layout-listing">
+<body>
 
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"VA Project","authors":[]}
+{"title":"REALVIS","authors":[]}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -1803,17 +1803,20 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <header class="header header--fixed" role="banner">
 <nav class="distill-site-nav distill-site-header">
 <div class="nav-left">
-<a href="index.html" class="title">VA Project</a>
+<a href="index.html" class="title">REALVIS</a>
 <div class="nav-dropdown">
 <button class="nav-dropbtn">
-Visual Analytics Project
+Deliverables
  
 <span class="down-arrow">&#x25BE;</span>
 </button>
 <div class="nav-dropdown-content">
 <a href="Proposal/proposal.html">Proposal</a>
+<a href="UserGuide/UserGuide_REALVIS.pdf">User Guide</a>
+<a href="Poster/Poster.png">Poster</a>
 </div>
 </div>
+<a href="https://hengguang.shinyapps.io/REALVIS/">Shiny App</a>
 </div>
 <div class="nav-right">
 <a href="index.html">Home</a>
@@ -1825,169 +1828,9 @@ Visual Analytics Project
 <!--/radix_placeholder_navigation_before_body-->
 <!--radix_placeholder_site_before_body-->
 <!--/radix_placeholder_site_before_body-->
-<!--radix_placeholder_article_listing-->
-
-
-<script type="application/javascript">
-
-function init_posts_list() {
-
-  function load_image(img) {
-    var src = $(img).attr('data-src');
-    if (src) {
-      $(img).attr('src', src);
-      $(img).on("load", function() {
-        img.removeAttribute('data-src');
-      });
-    }
-  }
-
-  function set_posts_visible(posts, visible) {
-    if (visible) {
-
-      // show bottom border by default
-      $(posts).removeClass('post-preview-last');
-
-      // apply limits if need be
-      var max_posts = 25;
-      var apply_limits = $('.posts-container').hasClass('posts-apply-limit');
-      if (apply_limits && posts.length > max_posts) {
-        posts = $(posts).slice(0, max_posts);
-      } else {
-        $('.posts-more a').addClass('hidden');
-      }
-
-      // apply last style
-      $(posts.slice(-1)[0]).addClass('post-preview-last');
-
-      $(posts).removeClass('hidden');
-      $(posts).find('img[data-src]').each(function(i, img) {
-        load_image(img);
-      });
-    } else {
-      $(posts).addClass('hidden');
-    }
-  }
-
-  function apply_hash_filter() {
-
-    // clear active state
-    $('.categories .active').removeClass('active');
-
-    // mark all posts invisible to start
-    set_posts_visible($('.posts-list').children('a'), false);
-
-    // if we have a hash filter
-    if (window.location.hash && window.location.hash.startsWith("#category:")) {
-
-      // mark posts that match the category visible
-      var page_category = window.location.hash.replace(/^#category:/, "");
-      page_category = decodeURIComponent(page_category)
-      var posts = $('.post-metadata').map(function(idx, script) {
-        var metadata = $.parseJSON($(script).html());
-        var post = null;
-        $.each(metadata.categories, function(idx, category) {
-          category = category.replace(/ /g,"_");
-          if ((page_category || '').toLowerCase() === "articles" || category === page_category) {
-            post = $(script).parent().get();
-            return false;
-          }
-        });
-        return post;
-      });
-      set_posts_visible(posts, true);
-
-      // mark the hash active
-      $('.categories li>a[href="' + decodeURIComponent(window.location.hash) + '"]').addClass('active');
-
-      // update the list_caption
-      var list_caption = $('.posts-list-caption');
-      var caption = (page_category || '').toLowerCase() === "articles"
-        ? list_caption.attr('data-caption')
-        : ('Category: ' + page_category.replace(/_/g," "));
-      list_caption.text(caption);
-
-    } else {
-
-      // no hash filter, make all posts visible (subject to max display)
-      set_posts_visible($('.posts-list').children(), true);
-
-      // reset list caption
-      var list_caption = $('.posts-list-caption');
-      list_caption.text(list_caption.attr('data-caption'));
-
-
-    }
-  }
-
-  // more articles
-  function apply_post_limits(apply) {
-    if (apply) {
-      $('.posts-container').addClass('posts-apply-limit');
-      $('.posts-more a').removeClass('hidden');
-    } else {
-      $('.posts-container').removeClass('posts-apply-limit');
-      $('.posts-more a').addClass('hidden');
-    }
-  }
-
-  // click handling for tags
-  $('.dt-tag').click(function(ev) {
-    window.location.hash = '#category:' + $(this).text().replace(/ /g, "_");
-    return false;
-  })
-
-  // hash filter handling
-  apply_hash_filter();
-  $(window).on('hashchange',function() {
-    apply_post_limits(true);
-    apply_hash_filter();
-  });
-
-  // more articles link
-  $('.posts-more a').click(function(e) {
-    e.preventDefault();
-    apply_post_limits(false);
-    apply_hash_filter();
-    return false;
-  });
-
-}
-
-</script>
-
-
-
-<div class="posts-container posts-apply-limit l-page">
-<div class="posts-list">
-<h1 class="posts-list-caption" data-caption="VA Project">VA Project</h1>
-<a href="posts/welcome/" class="post-preview">
-<script class="post-metadata" type="text/json">{"categories":[]}</script>
-<div class="metadata">
-<div class="publishedDate">March 6, 2022</div>
-<div class="dt-authors">
-<div class="dt-author">Mak Han Ren, Sia Heng Guang, Tan Jit Kai</div>
-</div>
-</div>
-<div class="thumbnail">
-<img/>
-</div>
-<div class="description">
-<h2>Welcome to our VA Project</h2>
-<div class="dt-tags"></div>
-<p>Welcome to our new blog, VA Project. We hope you enjoy 
-reading what we did!</p>
-</div>
-</a>
-</div>
-<div class="posts-more">
-<a href="#">More articles &raquo;</a>
-</div>
-</div>
-<!--/radix_placeholder_article_listing-->
 
 <div class="d-title">
-<h1>VA Project</h1>
+<h1>REALVIS</h1>
 <!--radix_placeholder_categories-->
 <!--/radix_placeholder_categories-->
 
@@ -1995,6 +1838,90 @@ reading what we did!</p>
 
 
 <div class="d-article">
+<p><strong>Project REALVIS: Making Smart Real Estate Decision using Visual Analytics</strong></p>
+<p>Visit our Shiny Application Page: <a href="https://hengguang.shinyapps.io/REALVIS/">REALVIS</a></p>
+<h1 id="project-introduction">Project Introduction</h1>
+<p>Real estate is an industry where information is critical to make the right decisions for customers. Timely information can help potential buyers decide where and what they should invest time and resources to look into and reduce time wasted and effort spent.</p>
+<p>In Singapore, information for real estate transactions is openly available on government websites for the public to download and use. Our team members were introduced to these data sets through various analytics classes where we used them to do various types of analysis.</p>
+<p>However, for most members of the public, the raw data sets that are provided are as good as none since they lack in training regarding data analytics and visualization, without which it is nearly impossible to identify trends or items of interest from within the data set. Our project application provides users with visualizations that help them to breakdown and understand the data that is provided easily.</p>
+<h1 id="motivation">Motivation</h1>
+<p>There are applications that perform visualizations and analysis similar or more complicated than ours out there in the market. Unfortunately, these applications are often targeted towards property agents with a substantial annual fee that make them unattractive and inaccessible to others. For non-agents to access them, they will need to contact a property agent who can help them with accessing the reports and visualizations.</p>
+<p>This usually occurs when a client engages the property agent to help them source for suitable houses with a commission fee. Thus non-buyers or those unwilling to engage an agent will need to look elsewhere and this is where we come in.</p>
+<h1 id="our-application">Our Application</h1>
+<p>The Shiny app we created using R consists of 3 modules.</p>
+<ol type="1">
+<li>Chloropleth Map, AKA a Heat Map of Singapore</li>
+<li>A Tree Map and Ridge Plot (Joyplot) to identify distribution patterns</li>
+<li>Statistical Test Results</li>
+</ol>
+<p>The first two modules will be suitable for most people without background knowledge of statistics to understand and use. The third module is more for us and others to test and confirm some common perceptions regarding the real estate industry.</p>
+<h2 id="data-source">Data Source</h2>
+<p>For this project, we have only used data sets for Private Property Transactions obtained from the URA REALIS database <a href="https://www.ura.gov.sg/reis/index">here</a>.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-1"></span>
+<img src="writeup/img/REALIS.png" alt="REALIS database by URA" width="100%" />
+<p class="caption">
+Figure 1: REALIS database by URA
+</p>
+</div>
+</div>
+<p>Specifically, we used the data sets for residential transactions from Jan 2017 to Dec 2021 as we wanted to focus the application towards residental home-buyers.</p>
+<h2 id="the-modules">The Modules</h2>
+<h3 id="chloropleth-map">Chloropleth Map</h3>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-2"></span>
+<img src="writeup/img/Chloropleth.png" alt="Chloropleth Map of Singapore by Number of Transaction" width="100%" />
+<p class="caption">
+Figure 2: Chloropleth Map of Singapore by Number of Transaction
+</p>
+</div>
+</div>
+<p>Our chloropleth map is designed to show the distribution of various types of values across the various planning areas of Singapore. Users will be able to determine the value that they are want to see as well as filter for specific types of property, types of sale and the year. With this, they will be able to see how the distribution changes with various input changes.</p>
+<p>For example, if we were to compare the number of condominium sales between 2020 and 2021, we would be able to see that Geylang and Clementi had a visible increase in transactions whereas the western water cachement planning area saw fewer transactions.</p>
+<h3 id="tree-map">Tree Map</h3>
+<p>Our Tree Map allows users to compare the median price per square foot (psf) and number of transactions for private properties across the planning areas and postal sectors of Singapore at the same time. The size of each rectangle is determined by the number of transactions happening whilst the depth of the color represents the median price psf of that postal sector.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-3"></span>
+<img src="writeup/img/treemap.png" alt="Tree Map of Condominium Transactions in 2021" width="100%" />
+<p class="caption">
+Figure 3: Tree Map of Condominium Transactions in 2021
+</p>
+</div>
+</div>
+<p>In the figure above, we can see that in 2021, the median prices for condominiums were overall higher in the central region and it had the most transactions compared to the other regions.</p>
+<h3 id="ridge-plot-joy-plot">Ridge Plot (Joy Plot)</h3>
+<p>The ridge plot was designed to follow up on the tree map where users will be able to select the areas of interest to them, for example, Bishan as in the figure below and observe the Price PSF trends by property type against type of sales.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-4"></span>
+<img src="writeup/img/ridge.png" alt="Ridge Plot and Datatable for Bishan between 2017 to 2021" width="100%" />
+<p class="caption">
+Figure 4: Ridge Plot and Datatable for Bishan between 2017 to 2021
+</p>
+</div>
+</div>
+<p>They will be able to compare the distributions across the years as well, like how the price psf for resale apartments in Bishan consolidated towards the upper $1000s from 2017 to 2021.</p>
+<p>There is also a supporting data table below that shows the median price psf, median transacted price, median size and number of units sold for each property type in the selected area within the specific year range.</p>
+<h3 id="statistical-test-results">Statistical Test Results</h3>
+<p>We conducted 3 tests with our data sets to find out the following:</p>
+<ol type="1">
+<li><p>Whether there was a difference in price between Landed and Non-Landed properties.</p></li>
+<li><p>Whether there was a different in price between freehold and tenured properties.</p></li>
+<li><p>Whether there was a correlation between the floor number and property prices.</p></li>
+</ol>
+<p>You can see the results for the last test below where we find that there was a weak correlation between floor and price.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-5"></span>
+<img src="writeup/img/correlation.png" alt="Correlation Test between Floor and Price" width="100%" />
+<p class="caption">
+Figure 5: Correlation Test between Floor and Price
+</p>
+</div>
+</div>
+<p>Hence, we can conclude that the floor of each property does affect the unit price. For the result of the other tests, visit our application!</p>
+<h1 id="conclusion">Conclusion</h1>
+<p>Our shiny application is currently only a working prototype that provides some visualization and analysis for users. However, we hope that with further improvements, our application will be of use to people who are searching for properties or interested in the private property market of Singapore.</p>
+<p>Visit our shiny application <a href="https://hengguang.shinyapps.io/REALVIS/">here</a> to try out the app and play around with the functions!</p>
+<p>Thank you very much for visiting our site!</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->

@@ -1,11 +1,25 @@
 ---
-title: "Making Smart Real Estate Decisions using Visual Analytics"
+title: "About the team"
 description: |
-  Additional Details about the Blog
+  We are a trio of students from SMU Masters of Information Technology in Business who took the module ISSS608 Visual Analytics. 
+  
+  This website contains a collection of works for our group project "REALVIS", a visualization of analytical methods we've applied to datasets for Singapore's Private Property Transactions.
+  
+  [Click here to visit our SHINY application](https://hengguang.shinyapps.io/REALVIS/)
+
+
+  _Team Members:_
+    
+    __Mak Han Ren__: [Linked-In Profile](https://www.linkedin.com/in/mak-han-ren/) | [Personal Netlify](https://makhanren.netlify.app/)
+    
+    __Sia Heng Guang__: [Linked-in Profile](https://www.linkedin.com/in/hengguang/) | [Personal Netlify](https://hengguang-608.netlify.app/)
+    
+    __Tan Jit Kai__: [Linked-In Profile](https://www.linkedin.com/in/jit-kai-tan-6b2aba12a/) | [Personal Netlify](https://tjkva2022.netlify.app/)
+    
+
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-Welcome to our blog! In this blog, we will showcase the various methods used to analyse real estate information, explore data, and make conclusions based on statistical analysis. We hope you like it!

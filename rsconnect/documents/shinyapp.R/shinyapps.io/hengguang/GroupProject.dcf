@@ -1,0 +1,14 @@
+name: GroupProject
+title: GroupProject
+username:
+account: hengguang
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 5997468
+bundleId: 5757584
+url: https://hengguang.shinyapps.io/groupproject/
+when: 1648915234.47072
+lastSyncTime: 1648915234.47072
+asMultiple: FALSE
+asStatic: FALSE
+ignoredFiles: -DESKTOP-SU0JS5B.RData|-DESKTOP-SU0JS5B.Rhistory|.RData|_site.yml|about.Rmd|index.Rmd|JK/aa.R|JK-ARIMA.R|JK_TEST.Rmd|Modules.xlsx|Poster/Poster.pptx|processed_df.csv|TreeDiagram.R|_posts|_site|Proposal
